@@ -3,23 +3,55 @@
 <head>
 <meta charset=“UTF-8”>
 	<title> Revisao ALX </title>
+	
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+</pre>
+&nbsp;
+<h2>Script de OnePage</h2>
+<pre lang="javascript"><script>
+$(document).ready(function(e) {    
+ $("nav a").click(function (event) {
+    event.preventDefault();   
+    var destino = 0;
+    if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
+        destino = $(document).height() - $(window).height();
+    } else {
+        destino = $(this.hash).offset().top;
+    }
+     
+    $('html,body').animate({
+        scrollTop: destino 
+    }, 2000, 'swing');
+});
+});
+ 
+</script>
+	
 </head>
 
 <body>
    <h1>Site Revisao ALX</h1>
 
-	<ul>
-	 <li><a href="#">Slide 01</a></li>
-	<li><a href="#">Slide 02</a></li>
-	<li><a href="#">Slide 03</a></li>
-	<li><a href="#">Slide 04</a></li>
-	<li><a href="#">Slide 05</a></li>
-	<li><a href="#">Slide 06</a></li>
-	<li><a href="#">Slide 07</a></li>
-	<li><a href="#">Slide 08</a></li>
-    </ul>
+<nav>
+<ul>
+<ul>
+    <li><a id="topo" href="#sec1" rel="nofollow">Slide 011</a></li>
+</ul>
+</ul>
+    <li><a href="#sec2" rel="nofollow">Slide 02</a></li>
+    <li><a href="#sec3" rel="nofollow">Slide 03</a></li>
+	<li><a href="#sec4" rel="nofollow">Slide 04</a></li>
+	<li><a href="#sec5" rel="nofollow">Slide 05</a></li>
+	<li><a href="#sec6" rel="nofollow">Slide 06</a></li>
+	<li><a href="#sec7" rel="nofollow">Slide 07</a></li>
+	<li><a href="#sec8" rel="nofollow">Slide 08</a></li>
+ 
+ 
+</nav>
+	
 	
 <br>
+	<section id="topo"
 <hr> 
 <ul>
 	<li> <h1> FUNDAMENTOS (S01)</h1>
@@ -87,8 +119,9 @@
 </ul>
 <br>
 <br>
-
+</section>
 <br>
+<section id="sec2">
 <hr> 
 <ul>
 	<li> <h1>TEORIA E MODELOS COLABORATIVOS (S02)</h1>  
@@ -272,7 +305,9 @@
 
 </ul>
 <br>
+	</section>
 <br> 
+	<section id="sec3">
 <hr> 
 <ul>
 	<li> <h1>ONTOLOGIA DE COLABORAÇÃO (S03)</h1>  
@@ -384,6 +419,7 @@
 
 </ul>
 <br>
+	</section>
 <br>  
 <hr> 
 <ul>
